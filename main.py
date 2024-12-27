@@ -3,6 +3,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 from binance.client import Client
 import time
 
+
 # Replace with your actual bot token and Binance API keys
 TELEGRAM_BOT_TOKEN = '7735488510:AAGwP9wah6sPjjRN52SdLjS_YqTncvnn3Sw'
 BINANCE_API_KEY = 'wDQiuxDfgbu5sHNgszLHSQ6dTtrIE0OALZvK5derXgckFWUPwzF4CFlrr42sIH1M'
@@ -10,6 +11,8 @@ BINANCE_API_SECRET = 'HjTFbSOjjwAB6cL7uId0ltguIF40beDXcFQqd6XPNc6b6heSlOsUn9WoyF
 
 bot = telebot.TeleBot(TELEGRAM_BOT_TOKEN)
 binance_client = Client(api_key=BINANCE_API_KEY, api_secret=BINANCE_API_SECRET)
+binance_client = Client(api_key=BINANCE_API_KEY, api_secret=BINANCE_API_SECRET, testnet=True)
+
 
 # Global variables to store user data
 user_data = {}
